@@ -1,0 +1,45 @@
+{
+  "forecasting": {
+    "data_file": "PUB_Demand_2024.csv",
+    "forecast_output_file": "forecast.json"
+  },
+  "optimization": {
+    "pv_data_file": "pvwatts_hourly.csv",
+    "pv_data_slice": {
+      "month": 4,
+      "day": 30
+    },
+    "grid_prices_cents_kwh": {
+      "off_peak": 9.7,
+      "mid_peak": 15.7,
+      "on_peak": 20.03
+    },
+    "assumed_microgrid_peak_kw": 12000.0,
+    "demand_charge_dollars_per_kw": 18.00 
+  },
+  "finance_specs": {
+    "solar_capex_per_kw": 1600.0,
+    "battery_capex_per_kwh": 450.0,
+    "project_lifetime_years": 20,
+    "discount_rate_pct": 3.0
+  },
+  "max_sizing": {
+    "max_solar_kw": 20000.0,
+    "max_battery_kwh": 10000.0,
+    "max_battery_power_kw": 5000.0
+  },
+  "current_specs": {
+    "pv_size_kw": 200.0,
+    "battery_capacity_kwh": 5000.0,
+    "battery_max_charge_kw": 2500.0,
+    "battery_max_discharge_kw": 2500.0,
+    "battery_efficiency_charge": 0.95,
+    "battery_efficiency_discharge": 0.95,
+    "battery_degradation_cost_cents_kwh": 2.0
+  },
+  "outputs": {
+    "dispatch_plot_file": "microgrid_dispatch.png",
+    "soc_plot_file": "battery_soc_vs_price.png",
+    "sizing_results_file": "optimal_sizing_results.csv"
+  }
+}
